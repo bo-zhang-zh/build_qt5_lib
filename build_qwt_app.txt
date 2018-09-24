@@ -1,0 +1,4 @@
+export QT_INSTALL_PREFIX=/home/zhangbo/zedboard/git-workspace/mk_rootfs/_rootfs
+/home/zhangbo/zedboard/git-workspace/mk_rootfs/_rootfs/bin/qmake qwt.pro
+make -j4
+
