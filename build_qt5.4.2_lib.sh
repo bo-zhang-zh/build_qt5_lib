@@ -1,8 +1,8 @@
 #! /bin/sh
 
 source_path="/home/zhangbo/zedboard/git-workspace/mk_rootfs/build_qt_lib/qt-everywhere-opensource-src-5.4.2"
-install_dir="/home/zhangbo/zedboard/git-workspace/mk_rootfs/_rootfs"
-tool_prefix="arm-linux-gnueabihf-"
+install_dir="/home/zhangbo/zedboard/git-workspace/mk_rootfs/build_qt_lib/qt_arm_lib"
+tool_prefix=$CROSS_COMPILE
 cur_path=$(cd `dirname $0`;pwd)
 
 export ZYNQ_QT_BUILD=$source_path/build
@@ -18,7 +18,7 @@ cd ${source_path}
 ./configure -xplatform ${tool_prefix}g++ \
     -opensource \
     -confirm-license \
-    -hostprefix /home/zhangbo/zedboard/git-workspace/mk_rootfs/qt_host_binary \
+    -hostprefix /home/zhangbo/zedboard/git-workspace/mk_rootfs/build_qt_lib/qt_host_binary \
     -nomake examples \
     -skip qtquickcontrols \
     -skip qtwebkit \
